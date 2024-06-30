@@ -45,18 +45,19 @@ img {
     "sb-bottom";
 }
 
-#sidebar button {
+#sidebar button,
+#header-top-right > button {
   height: auto;
   width: auto;
   background: none;
   border: none;
   color: rgba(0, 0, 0, 0.75);
   font-size: 18px;
+  font-weight: 600;
 }
 
 #sidebar-top button {
   font-size: 22px;
-  font-weight: 600;
 }
 
 #sidebar > div > div {
@@ -72,14 +73,6 @@ img {
   align-items: center;
   padding-left: 20px;
 }
-
-/* #sidebar-top,
-#sidebar-center,
-#sidebar-bottom,
-#sidebar-bottom>div,
-img {
-  border: 2px solid black;
-} */
 
 #sidebar-top {
   grid-area: sb-top;
@@ -101,8 +94,93 @@ img {
 }
 
 #header {
-  background-color: orangered;
   grid-area: hd;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "hd-top"
+    "hd-bottom";
+}
+
+#header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header-top-left,
+#header-top-right {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  width: 25%;
+  margin-left: 30px;
+}
+
+#header-top-left>*,
+#header-top-right>*{
+    margin-right: 25px
+}
+
+#header-top-left > input {
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 10px;
+  height: 25px;
+  padding: 10px;
+  font-size: 1.0rem;
+}
+
+#header-top-right > button {
+  color: black;
+}
+
+#header-bottom {
+  display: flex;
+}
+
+#header-bottom-left{
+    display: flex;
+    align-items: center;
+}
+
+#header-bottom-left img{
+    width: 120px;
+    height: 50px;
+}
+
+#header-bottom-left>div{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+#header-bottom-left span:first-child{
+    font-size: 0.8rem;
+    height: auto;
+}
+
+#header-bottom-left span:nth-child(2){
+    font-weight: bold;
+    height: auto;
+}
+
+#header-bottom-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header-bottom-right button{
+    width: 80px;
+    height: 30px;
+    background-color: #3d67f2;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 8%;
 }
 
 #content {
