@@ -1,1 +1,0 @@
-#header-top-left > input -> displays a black border when active 
