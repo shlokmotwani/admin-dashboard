@@ -29,7 +29,7 @@ img {
 #main {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: minmax(repeat(5, 1fr), auto);
   grid-template-areas:
     "sb hd hd hd"
     "sb ct ct ct"
@@ -236,12 +236,12 @@ h4 {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   padding: 10px 40px;
+  max-width: fit-content;
 }
 
 .card {
   min-width: 30%;
   max-width: 400px;
-  height: 180px;
   background-color: var(--card-background-color);
   display: grid;
   grid-template-columns: 3% 97%;
