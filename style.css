@@ -245,7 +245,6 @@ h4 {
   display: grid;
   grid-template-columns: 3% 97%;
   border-radius: 15px;
-  height: auto;
 }
 
 .card-left {
@@ -255,6 +254,7 @@ h4 {
 
 .card-right{
   display: grid;
+  grid-template-rows: 85% 15%;
   padding: 10px;
 }
 
