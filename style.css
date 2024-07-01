@@ -28,7 +28,7 @@ img {
 
 #main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-columns: 1fr repeat(3, 2fr);
   grid-template-rows: minmax(repeat(5, 1fr), auto);
   grid-template-areas:
     "sb hd hd hd"
@@ -203,9 +203,9 @@ img {
   grid-template-columns: repeat(2, 1.5fr) 1.2fr;
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-    "project project extras"
-    "project project extras"
-    "project project extras";
+    "project project misc"
+    "project project misc"
+    "project project misc";
 }
 
 #project {
@@ -236,15 +236,16 @@ h4 {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   padding: 10px 40px;
+  margin-top: -40px;
 }
 
 .card {
-  min-width: 30%;
-  max-width: 400px;
+  width: minmax(fit-content, 400px);
   background-color: var(--card-background-color);
   display: grid;
   grid-template-columns: 3% 97%;
   border-radius: 15px;
+  height: auto;
 }
 
 .card-left {
@@ -254,6 +255,7 @@ h4 {
 
 .card-right{
   display: grid;
+  padding: 10px;
 }
 
 p{
@@ -271,7 +273,71 @@ p{
   margin: 0 10px;
 }
 
-#extras {
-  background-color: yellow;
-  grid-area: extras;
+#misc {
+  grid-area: misc;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#announcement-card{
+  display: grid;
+  background-color: var(--card-background-color);
+  border-radius: 15px;
+  padding: 10px;
+  width: 70%;
+  height: 90%;
+  margin-bottom: 50px;
+  justify-self: center;
+}
+
+#announcement-card p:first-child{
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+hr{
+  width: 60%;
+  height: 1px;
+}
+
+.ann-item{
+  height: fit-content;
+}
+
+#announcements-container, #trending{
+  display: grid;
+  grid-template-rows: 1fr 7fr;
+}
+
+#trending-card{
+  display: grid;
+  background-color: var(--card-background-color);
+  border-radius: 15px;
+  padding: 10px;
+  width: 70%;
+  height: 90%;
+  margin-bottom: 50px;
+  justify-self: center;
+}
+
+.trending-item{
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending-item div{
+  width: auto;
+}
+
+.trending-item img{
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.trending-item p{
+  font-size: 0.8rem;
+  line-height: 4px;
 }
