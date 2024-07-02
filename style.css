@@ -214,12 +214,12 @@ img {
   grid-template-rows: 10% 90%;
 }
 
-h3{
+h3 {
   margin-left: 20px;
-  font-size: 25px;  
+  font-size: 25px;
 }
 
-h4{
+h4 {
   margin: 10px 0;
   font-size: 1.2rem;
 }
@@ -252,24 +252,24 @@ h4 {
   border-radius: 15px 0 0 15px;
 }
 
-.card-right{
+.card-right {
   display: grid;
   grid-template-rows: 85% 15%;
   padding: 10px;
 }
 
-p{
+p {
   height: fit-content;
-  font-size: 1.0rem;
+  font-size: 1rem;
   padding: 0 15px;
 }
 
-.card-buttons{
+.card-buttons {
   display: flex;
   justify-content: flex-end;
 }
 
-.card-buttons img{
+.card-buttons img {
   margin: 0 10px;
 }
 
@@ -279,7 +279,7 @@ p{
   grid-template-rows: repeat(2, 1fr);
 }
 
-#announcement-card{
+#announcement-card {
   display: grid;
   background-color: var(--card-background-color);
   border-radius: 15px;
@@ -290,26 +290,27 @@ p{
   justify-self: center;
 }
 
-#announcement-card p:first-child{
+#announcement-card p:first-child {
   font-size: 0.9rem;
   font-weight: bold;
 }
 
-hr{
+hr {
   width: 60%;
   height: 1px;
 }
 
-.ann-item{
+.ann-item {
   height: fit-content;
 }
 
-#announcements-container, #trending{
+#announcements-container,
+#trending {
   display: grid;
   grid-template-rows: 1fr 7fr;
 }
 
-#trending-card{
+#trending-card {
   display: grid;
   background-color: var(--card-background-color);
   border-radius: 15px;
@@ -320,24 +321,24 @@ hr{
   justify-self: center;
 }
 
-.trending-item{
+.trending-item {
   display: flex;
   height: fit-content;
   justify-content: center;
   align-items: center;
 }
 
-.trending-item div{
+.trending-item div {
   width: auto;
 }
 
-.trending-item img{
+.trending-item img {
   height: 40px;
   margin-top: 5px;
   margin-left: 10px;
 }
 
-.trending-item p{
+.trending-item p {
   font-size: 0.8rem;
   line-height: 4px;
 }
